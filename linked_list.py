@@ -63,8 +63,15 @@ class LinkedList:
 				nodes.append("[Tail: %s]" % current.data)
 			else:
 				nodes.append("[%s]" % current.data)
-				
+
 			current = current.next_node
 		return " -> ".join(nodes)
+
+
+l = LinkedList()
+l.add(1)
+l.add(2)
+l.add(3)
+print(l)
 
 
