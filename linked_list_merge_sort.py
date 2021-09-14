@@ -1,12 +1,14 @@
 from linked_list import LinkedList
 
-def merge_sort(LinkedList):
+def merge_sort(linked_list):
 	"""
 	Sorts a linked list in asceeding order
 	- Recursivly divide the linked list into sublists containing a single node
 	- Repeatedly merge the sublists tp produce sorted sublists until one remains
 
 	Returns a sorted linked list
+
+	Runs in O(kn log n) time where k is the number of nodes in the list 
 	"""
 	if linked_list.size() == 1:
 		return linked_list
@@ -22,6 +24,7 @@ def merge_sort(LinkedList):
 def split(linked_list):
 	"""
 	Divide the unsorted list at midpoint into sublist
+	Takes O(k log n) time where k is the number of nodes in the list
 	"""
 
 	if linked_list.head is None or linked_list is None:
@@ -46,6 +49,7 @@ def merge(left, right):
 	"""
 	Merges two linked lists, sorting by data in nodes
 	Returns a new, merged list
+	Runs in O(n) time (linear)
 	"""
 
 	# Cretae a new linked list taht contains nodes from merging left and right
@@ -97,4 +101,16 @@ def merge(left, right):
 	head = merged.head.next_node
 	merged.head = head 
 
-	return merged 	
+	return merged
+
+l = LinkedList()
+l.add(1)
+l.add(21)
+l.add(34)
+l.add(49)
+l.add(500)
+print(l)
+sorted_linked_list = merge_sort(l)
+print(sorted_linked_list)
+
+

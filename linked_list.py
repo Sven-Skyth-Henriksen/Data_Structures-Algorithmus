@@ -148,18 +148,8 @@ class LinkedList:
 		return " -> ".join(nodes)
 
 
-l = LinkedList()
-l.add(10)
-l.add(25)
-l.add(32)
-l.add(45)
 
-n = l.search(32)
-print(n)
-print(l)
-l.remove(32)
-print(l)
-l.insert(32, 2)
-print(l)
+
+
 
 
