@@ -5,7 +5,7 @@ numbers = [1, 5, 8, 2, 3, 4, 7, 6]
 
 def selection_sort(values):
 	sorted_list = []
-	print("%-25s %-25s" % (values, sorted_list)) # Can be removedti
+	print("%-25s %-25s" % (values, sorted_list)) # Can be removed
 	for i in range(0, len(values)):
 		index_to_move = index_of_min(values)
 		sorted_list.append(values.pop(index_to_move))
